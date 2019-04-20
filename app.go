@@ -69,4 +69,12 @@ func main() {
 	for key, value := range m {
 		fmt.Println("key:", key, "value:", value)
 	}
+
+	// calling external function
+	result := sum(2,8)
+	fmt.Println(result)
+}
+
+func sum(x int, y int) int {
+	return x + y
 }
