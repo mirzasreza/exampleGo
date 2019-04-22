@@ -14,8 +14,8 @@ func main() {
 	//var y int = 30
 	y := 31
 	//var sum int = x + y
-	sum := x + y
-	fmt.Println(sum)
+	addNum := x + y
+	fmt.Println(addNum)
 
 	if x > 70 {
 		fmt.Println("X greater than 70")
