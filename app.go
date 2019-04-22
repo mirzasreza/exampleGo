@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"errors"
+	"math"
 )
 
 func main() {
@@ -70,11 +72,28 @@ func main() {
 		fmt.Println("key:", key, "value:", value)
 	}
 
-	// calling external function
-	result := sum(2,8)
-	fmt.Println(result)
+	// calling external function with single parameter
+	sumResult := sum(2, 3)
+	fmt.Println(sumResult)
+
+	// calling external function with double parameter
+	result, err := sqroot(16)
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
+	}
 }
 
 func sum(x int, y int) int {
 	return x + y
+}
+
+func sqroot(x float64) (float64, error) {
+	if x < 0 {
+		return 0, errors.New("Undefined error for negetive number")
+	}
+	
+	return math.Sqrt(x), nil
 }
