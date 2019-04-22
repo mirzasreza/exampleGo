@@ -95,6 +95,13 @@ func main() {
 	fmt.Println(p)
 	fmt.Println(p.age)
 
+	// pointers
+	po := 9
+	inc(&po)
+	fmt.Println(po)
+
+
+
 }
 
 func sum(x int, y int) int {
@@ -107,4 +114,8 @@ func sqroot(x float64) (float64, error) {
 	}
 	
 	return math.Sqrt(x), nil
+}
+
+func inc (x *int) {
+	*x++
 }
