@@ -6,6 +6,11 @@ import (
 	"math"
 )
 
+type person struct {
+	name string
+	age int
+}
+
 func main() {
 	fmt.Println("Hello, World!")
 
@@ -84,6 +89,12 @@ func main() {
 	} else {
 		fmt.Println(result)
 	}
+
+	// struct
+	p := person {name: "Mirza", age: 40}
+	fmt.Println(p)
+	fmt.Println(p.age)
+
 }
 
 func sum(x int, y int) int {
